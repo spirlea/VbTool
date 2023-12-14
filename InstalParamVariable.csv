@@ -1,0 +1,12 @@
+VariableName,PlcName,type,active
+AbsoluteMaxSpeed,VRI_Definitions.VRI_PrdSpeed,3,1
+CurrentSpeed,VRI_Definitions.VRI_SetSpeed,3,1
+EngineAlarmCode,Vision_Definitions.Vision_DevComm[{}].Inputs.EngineFault,5,1
+EngineReady,Vision_Definitions.Vision_DevComm[{}].Inputs.Ready,5,1
+FotmatMaxSpeed,VRI_Definitions.VRI_RefSpeed,3,1
+KeySelector,VRI_Definitions.VRI_AutoModeOn,5,1
+MachineCycleStatus,VRI_Definitions.VRI_Cycles.Status,5,1
+ResetAlarm,Vision_Definitions.Vision_DevComm[{}].Outputs.EngineReset,5,1
+SCADAFormatEnabled,"Vision_Definitions.Vision_DevCommHWEnable[{}, 1]",3,1
+SpinMode,VCS1_Definitions.VCS1_VialsSpins[{}].Setup.SpinType,3,1
+SystemExcluded,hhddd,5,1
