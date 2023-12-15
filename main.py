@@ -80,11 +80,8 @@ class VisionBox:
         ET.indent(root, space='  ', level=0)
         tree.write(xml_file_path, encoding="utf-8", xml_declaration=False, method="xml", short_empty_elements=False)
 
-    def writetags(self, datatags, path):  # cream fisierul install param pentru fiecare statie
-
-        if os.path.exists(path):
-            pass
-        else:
+    def writetags(self, datatags, datatags1, path):
+        if not os.path.exists(path):
             os.mkdir(path)
 
         for numest, st in self.stations.items():
@@ -92,10 +89,15 @@ class VisionBox:
             for items in datatags:
                 tag_tree = create_tag_list(items['VariableName'], items['PlcName'].format(st[1]), items['type'])
                 base_tree.getroot().append(tag_tree)
+
+            # Adauga tag-urile pentru data1
+            for items1 in datatags1:
+                tag_tree1 = create_tag_list(items1['VariableName'], items1['PlcName'].format(st[3]), items1['type'])
+                base_tree.getroot().append(tag_tree1)
+
             ET.indent(base_tree, space='  ', level=0)
-            base_tree.write(path + '//' + numest + "_InstallParam.xml", encoding="utf-8", xml_declaration=False,
-                            method="xml",
-                            short_empty_elements=False)
+            base_tree.write(os.path.join(path, f"{numest}_InstallParam.xml"), encoding="utf-8", xml_declaration=False,
+                            method="xml", short_empty_elements=False)
     def afiseazaconst(self):
         print('{}{}{}{}'.format(self.VLK_CAMPANE, self.C1_GRIPPERS, self.MACHINE_SPEED, self.C2_CLAMPS))
 
@@ -319,20 +321,13 @@ file_pathspins = 'ConfigFiles/SpinsVariable.csv'
 data = []
 data1 = []
 data1 = read_csv_file(file_pathspins)
-
 data = read_csv_file(file_path)
 
-# Scrie variabilele in fisier
-# for visionb in vbarr:
-#     if visionb.name == 'PanelPC':
-#         visionb.writetags(data, pathStart + '//' + visionb.name)
-#     else:
-#         visionb.writetags(data, pathStart + '//' + 'VB' + visionb.name)
 
 for visionb in vbarr:
     if visionb.name == 'PanelPC':
-        visionb.writetags(data, pathStart + '//' + visionb.name)
-        visionb.add_tags_from_list(data1, visionb.name,visionb.name)
+        visionb.writetags(data, data1, pathStart + '//' + visionb.name)
     else:
-        visionb.writetags(data, pathStart + '//' + 'VB' + visionb.name)
-        visionb.add_tags_from_list(data1, 'VB' + visionb.name,visionb.name)
+        visionb.writetags(data, data1, pathStart + '//' + 'VB' + visionb.name)
+
+print(vbarr[0].stations)

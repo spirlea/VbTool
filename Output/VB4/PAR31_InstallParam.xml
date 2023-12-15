@@ -1,0 +1,156 @@
+<Root>
+  <AbsoluteMaxSpeed>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VRI_Definitions.VRI_PrdSpeed</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </AbsoluteMaxSpeed>
+  <CurrentSpeed>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VRI_Definitions.VRI_SetSpeed</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </CurrentSpeed>
+  <EngineAlarmCode>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">Vision_Definitions.Vision_DevComm[8].Inputs.EngineFault</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">5</Type>
+  </EngineAlarmCode>
+  <EngineReady>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">Vision_Definitions.Vision_DevComm[8].Inputs.Ready</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">5</Type>
+  </EngineReady>
+  <FotmatMaxSpeed>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VRI_Definitions.VRI_RefSpeed</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </FotmatMaxSpeed>
+  <KeySelector>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VRI_Definitions.VRI_AutoModeOn</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">5</Type>
+  </KeySelector>
+  <MachineCycleStatus>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VRI_Definitions.VRI_Cycles.Status</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">5</Type>
+  </MachineCycleStatus>
+  <ResetAlarm>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">Vision_Definitions.Vision_DevComm[8].Outputs.EngineReset</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">5</Type>
+  </ResetAlarm>
+  <SCADAFormatEnabled>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">Vision_Definitions.Vision_DevCommHWEnable[8, 1]</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SCADAFormatEnabled>
+  <SystemExcluded>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">hhddd</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">5</Type>
+  </SystemExcluded>
+  <SpinMode>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Setup.SpinType</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinMode>
+  <SpinAcceleration>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.MainProfile.Acceleration</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinAcceleration>
+  <SpinDeceleration>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.MainProfile.Deceleration</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinDeceleration>
+  <SpinSpeed>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.MainProfile.Speed</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinSpeed>
+  <SpinRevolutions>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.MainProfile.HTurns</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinRevolutions>
+  <SpinDelay>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.MainProfile.Pause</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinDelay>
+  <SpinAcceleration_Prespin>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.PreProfile.Acceleration</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinAcceleration_Prespin>
+  <SpinDeceleration_Prespin>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.PreProfile.Deceleration</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinDeceleration_Prespin>
+  <SpinSpeed_Prespin>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.PreProfile.Speed</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinSpeed_Prespin>
+  <SpinRevolutions_Prespin>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.PreProfile.HTurns</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinRevolutions_Prespin>
+  <SpinDelay_Prespin>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.PreProfile.Pause</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </SpinDelay_Prespin>
+  <NumberOfCycles_Prespin>
+    <PLCVarName AuditItemType="-1" Description="Name of variable defined in the PLC">VCS1_Definitions.VCS1_VialsSpins[4].Parameters.PreProfile.Repetitions</PLCVarName>
+    <DBNumber AuditItemType="-1" Description="Memory block">9</DBNumber>
+    <ByteOffset AuditItemType="-1" Description="Byte Offset">120</ByteOffset>
+    <BitOffset AuditItemType="-1" Description="Bit Offset">0</BitOffset>
+    <Type AuditItemType="-1" Description="Data type">3</Type>
+  </NumberOfCycles_Prespin>
+</Root>
