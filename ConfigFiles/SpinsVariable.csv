@@ -1,0 +1,12 @@
+VariableName,PlcName,type,active
+SpinAcceleration,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.MainProfile.Acceleration,3,1
+SpinDeceleration,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.MainProfile.Deceleration,3,1
+SpinSpeed,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.MainProfile.Speed,3,1
+SpinRevolutions,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.MainProfile.HTurns,3,1
+SpinDelay,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.MainProfile.Pause,3,1
+SpinAcceleration_Prespin,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.PreProfile.Acceleration,3,1
+SpinDeceleration_Prespin,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.PreProfile.Deceleration,3,1
+SpinSpeed_Prespin,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.PreProfile.Speed,3,1
+SpinRevolutions_Prespin,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.PreProfile.HTurns,3,1
+SpinDelay_Prespin,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.PreProfile.Pause,3,1
+NumberOfCycles_Prespin,VCS1_Definitions.VCS1_VialsSpins[{}].Parameters.PreProfile.Repetitions,3,1

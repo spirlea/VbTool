@@ -60,7 +60,27 @@ class VisionBox:
         print('ETH3: {}'.format(self.eth3))
         print('ETH4: {}'.format(self.eth4))
 
-    def writetags(self, datatags,path):  # cream fisierul install param pentru fiecare statie
+    def add_tags_from_list(self, datatags, path, station_name):
+        xml_file_path = os.path.join(path, f"{station_name}_InstallParam.xml")
+
+        # Verifică dacă fișierul există
+        if os.path.exists(xml_file_path):
+            tree = ET.parse(xml_file_path)
+            root = tree.getroot()
+        else:
+            # Creează un arbore nou dacă fișierul nu există
+            root = ET.Element("Root")
+            tree = ET.ElementTree(root)
+
+        for items in datatags:
+            tag_tree = create_tag_list(items['VariableName'], items['PlcName'].format(self.stations[station_name][1]),
+                                       items['type'])
+            root.append(tag_tree)
+
+        ET.indent(root, space='  ', level=0)
+        tree.write(xml_file_path, encoding="utf-8", xml_declaration=False, method="xml", short_empty_elements=False)
+
+    def writetags(self, datatags, path):  # cream fisierul install param pentru fiecare statie
 
         if os.path.exists(path):
             pass
@@ -73,7 +93,8 @@ class VisionBox:
                 tag_tree = create_tag_list(items['VariableName'], items['PlcName'].format(st[1]), items['type'])
                 base_tree.getroot().append(tag_tree)
             ET.indent(base_tree, space='  ', level=0)
-            base_tree.write(path+'//'+numest+"_InstallParam.xml", encoding="utf-8", xml_declaration=False, method="xml",
+            base_tree.write(path + '//' + numest + "_InstallParam.xml", encoding="utf-8", xml_declaration=False,
+                            method="xml",
                             short_empty_elements=False)
     def afiseazaconst(self):
         print('{}{}{}{}'.format(self.VLK_CAMPANE, self.C1_GRIPPERS, self.MACHINE_SPEED, self.C2_CLAMPS))
@@ -168,11 +189,12 @@ def data_excel_validation(value_to_validate):
 
 
 def read_csv_file(file_path):
+    tempdata = []
     with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:  # Deschide fișierul CSV și citește conținutul
         csvreader = csv.DictReader(csvfile)
         for row in csvreader:  # Iterează prin rândurile din fișierul CSV
-            data.append(row)
-    return data
+            tempdata.append(row)
+    return tempdata
 
 
 workingPath = os.getcwd()
@@ -293,14 +315,24 @@ for vb in vbarr:
                 vb.add_station(stname, orderlist[0], listorder.index(stname) + 1, poz)
 ###############################################################
 file_path = 'ConfigFiles/InstalParamVariable.csv'
+file_pathspins = 'ConfigFiles/SpinsVariable.csv'
 data = []
+data1 = []
+data1 = read_csv_file(file_pathspins)
 
 data = read_csv_file(file_path)
+
 # Scrie variabilele in fisier
+# for visionb in vbarr:
+#     if visionb.name == 'PanelPC':
+#         visionb.writetags(data, pathStart + '//' + visionb.name)
+#     else:
+#         visionb.writetags(data, pathStart + '//' + 'VB' + visionb.name)
+
 for visionb in vbarr:
     if visionb.name == 'PanelPC':
         visionb.writetags(data, pathStart + '//' + visionb.name)
+        visionb.add_tags_from_list(data1, visionb.name,visionb.name)
     else:
         visionb.writetags(data, pathStart + '//' + 'VB' + visionb.name)
-
-
+        visionb.add_tags_from_list(data1, 'VB' + visionb.name,visionb.name)
